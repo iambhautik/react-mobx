@@ -1,11 +1,17 @@
-import { Fragment } from 'react';
+import { Fragment } from "react";
+import ContextDemo from "./components/contextDemo";
+import MobXDemo from "./components/mobxDemo";
+import { mainStore, StoreContextProvider } from "./container";
 
 function App() {
-  return (
-    <Fragment>
-      <p>Hello MobX</p>
-    </Fragment>
-  );
+    return (
+        <Fragment>
+            {/* <ContextDemo /> */}
+            <StoreContextProvider value={mainStore}>
+                <MobXDemo />
+            </StoreContextProvider>
+        </Fragment>
+    );
 }
 
 export default App;
