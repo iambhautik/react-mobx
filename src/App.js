@@ -1,25 +1,17 @@
-import { Component, Fragment } from 'react';
-import Component1 from './components/Component1';
-import Component2 from './components/Component2';
-import { ThemeContextProvider } from './context/themeContext';
+import { Fragment } from "react";
+import ContextDemo from "./components/contextDemo";
+import MobXDemo from "./components/mobxDemo";
+import { mainStore, StoreContextProvider } from "./container";
 
 function App() {
-
-
-  const styles = {
-    'backgroundColor': 'skyblue'
-  }
-
-
-  return (
-    <Fragment>
-      <ThemeContextProvider value={styles} >
-        <Component1 />
-        <Component2 />
-      </ThemeContextProvider>
-        <p>Hello MobX</p>
-    </Fragment>
-  );
+    return (
+        <Fragment>
+            {/* <ContextDemo /> */}
+            <StoreContextProvider value={mainStore}>
+                <MobXDemo />
+            </StoreContextProvider>
+        </Fragment>
+    );
 }
 
 export default App;
