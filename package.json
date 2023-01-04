@@ -1,0 +1,25 @@
+{
+  "name": "react-mobx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-client": "cd client && npm start",
+    "start-server": "cd server && npm start",
+    "start": "concurrently \"npm run start-client\" \"npm run start-server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iambhautik/react-mobx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iambhautik/react-mobx/issues"
+  },
+  "homepage": "https://github.com/iambhautik/react-mobx#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
